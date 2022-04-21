@@ -1,6 +1,0 @@
-G:/Programming/c++/stinTest/stinTest/build/.dump/CMakeFiles/main.dir
-G:/Programming/c++/stinTest/stinTest/build/.dump/CMakeFiles/Test_HttpConnection.dir
-G:/Programming/c++/stinTest/stinTest/build/.dump/CMakeFiles/Test_test.dir
-G:/Programming/c++/stinTest/stinTest/build/.dump/CMakeFiles/test.dir
-G:/Programming/c++/stinTest/stinTest/build/.dump/CMakeFiles/edit_cache.dir
-G:/Programming/c++/stinTest/stinTest/build/.dump/CMakeFiles/rebuild_cache.dir
