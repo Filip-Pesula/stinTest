@@ -1,6 +1,8 @@
-include(./build/release/dump/CTestTestfile.cmake)
+include(./build/.dump/CTestTestfile.cmake)
 
-file(GLOB GCOVFILE build/release/dump/CMakeFiles/*.dir/src)
+file(GLOB GCOVFILE build/.dump/CMakeFiles/*.dir/src/*.gcno)
+
+ctest_coverage_collect_gcov()
 
 foreach(gcovfile ${GCOVFILE})
     message("gcovefolder=${gcovfile}")

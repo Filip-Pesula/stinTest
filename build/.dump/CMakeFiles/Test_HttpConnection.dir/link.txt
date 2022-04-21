@@ -1,0 +1,3 @@
+"G:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Test_HttpConnection.dir/objects.a
+G:\MinGW\bin\ar.exe qc CMakeFiles\Test_HttpConnection.dir/objects.a @CMakeFiles\Test_HttpConnection.dir\objects1.rsp
+G:\MinGW\bin\g++.exe -g -O0 -Wall -fprofile-arcs -ftest-coverage -fprofile-arcs -ftest-coverage -Wl,--whole-archive CMakeFiles\Test_HttpConnection.dir/objects.a -Wl,--no-whole-archive -o ..\test\Test_HttpConnection.exe -Wl,--out-implib,libTest_HttpConnection.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Test_HttpConnection.dir\linklibs.rsp
