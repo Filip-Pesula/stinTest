@@ -5,9 +5,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 include(${CMAKE_SOURCE_DIR}/lib/CMakeLists.txt)
 
 
-SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs --coverag")
-SET(CMAKE_C_FLAGS "-g -O0 -Wall -W -fprofile-arcs --coverag")
-SET(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs --coverag")
+SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
+SET(CMAKE_C_FLAGS "-g -O0 -Wall -W -fprofile-arcs -ftest-coverage")
+SET(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage")
 
 project(main)
 

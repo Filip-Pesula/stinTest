@@ -6,13 +6,12 @@
         {
             "label": "debug",
             "type": "shell",
-            "command": "./build/release/release_B;",
+            "command": "cmake",
             "args": [
-                "cd",
-                "'build/release/dump';",
-                "cmake",
+                "-B",
+                "build/.dump",
                 "-S",
-                "../../../",         
+                ".",         
 
                 //"-std=gnu++20",
                 "-G",
@@ -20,9 +19,7 @@
                 ";",
                 "cmake",
                 "--build",  
-                "./;",
-                "cd",
-                "${workspaceFolder};",
+                "build/.dump;",
                 "ctest",
 
 
