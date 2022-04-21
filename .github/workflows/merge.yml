@@ -30,7 +30,15 @@ jobs:
         
       - name: get cmake versio
         run: cmake --version
-
+        
+      - name: build
+        run: |
+          cmake -B build/.dump -S .,
+          cmake --build build/.dump
+          
+      - name: test
+        run: ctest
+        
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
