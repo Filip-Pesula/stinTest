@@ -22,12 +22,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
         with:
           python-version: '3.9'
           cache: 'pip'
-      - run: pip install gcovr
+      - run: | 
+          pip install -r requirements.txt
+          pip install gcovr
         
       - name: get tools version
         run: | 
