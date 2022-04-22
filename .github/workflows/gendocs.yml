@@ -45,9 +45,14 @@ jobs:
           
       - name: test
         run: ctest
+
+      - name: generate Docs/Coverage
+        run: mkdir Docs/Coverage/Html
+        run: mkdir Docs/Coverage/Sonarqube
+        run: | 
+        -r . -f src --html-details Docs/Coverage/Html/coverage.html \
+        --sonarqube Docs/Coverage/Sonarqube/coverage.yml -o gcovfile/gcov
         
-      - name: Create report file
-        run: date +%s > report.txt
       - name: Commit report
         run: |
           git config --global user.name 'Filip-Pesula'
