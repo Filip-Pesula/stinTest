@@ -48,6 +48,8 @@ jobs:
 
       - name: generate Docs/Coverage
         run: |
+          mkdir Docs
+          mkdir Docs/Coverage
           mkdir Docs/Coverage/Html
           mkdir Docs/Coverage/Sonarqube
       - run: >
