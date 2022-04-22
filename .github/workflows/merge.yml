@@ -47,3 +47,8 @@ jobs:
       - name: test
         run: ctest
         
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: build/bin/
+
