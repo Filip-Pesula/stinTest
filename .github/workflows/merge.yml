@@ -19,7 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v3
@@ -47,12 +47,6 @@ jobs:
       - name: test
         run: ctest
         
-      - uses: actions/upload-artifact@v3
-        with:
-          name: my-artifact
-          path: build/bin/
-          
-      - uses: actions/checkout@v1
       - name: Create report file
         run: date +%s > report.txt
       - name: Commit report
@@ -61,6 +55,7 @@ jobs:
           git config --global user.email 'filip.pesula@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout "${GITHUB_REF:11}"
+          git add -f build/bin/main
           git commit -am "Automated report"
           git push
 
