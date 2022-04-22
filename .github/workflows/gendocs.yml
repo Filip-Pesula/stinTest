@@ -49,9 +49,9 @@ jobs:
       - name: generate Docs/Coverage
         run: mkdir Docs/Coverage/Html
         run: mkdir Docs/Coverage/Sonarqube
-        run: | 
-        -r . -f src --html-details Docs/Coverage/Html/coverage.html \
-        --sonarqube Docs/Coverage/Sonarqube/coverage.yml -o gcovfile/gcov
+        run: >
+          gcovr -r . -f src --html-details Docs/Coverage/Html/coverage.html 
+          --sonarqube Docs/Coverage/Sonarqube/coverage.yml -o gcovfile/gcov
         
       - name: Commit report
         run: |
