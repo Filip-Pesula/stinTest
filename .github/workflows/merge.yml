@@ -5,8 +5,7 @@ name: test
 # Controls when the workflow will run
 on: 
   # Triggers the workflow on push or pull request events but only for the makser branch
-  push:
-    branches: [ makser ]
+  
   pull_request:
     branches: [ makser ]
 
@@ -46,16 +45,4 @@ jobs:
           
       - name: test
         run: ctest
-        
-      - name: Create report file
-        run: date +%s > report.txt
-      - name: Commit report
-        run: |
-          git config --global user.name 'Filip-Pesula'
-          git config --global user.email 'filip.pesula@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git checkout "${GITHUB_REF:11}"
-          git add -f build/bin/main
-          git commit -am "Automated report"
-          git push
 
