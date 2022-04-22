@@ -47,9 +47,10 @@ jobs:
         run: ctest
 
       - name: generate Docs/Coverage
-        run: mkdir Docs/Coverage/Html
-        run: mkdir Docs/Coverage/Sonarqube
-        run: >
+        run: |
+          mkdir Docs/Coverage/Html
+          mkdir Docs/Coverage/Sonarqube
+      - run: >
           gcovr -r . -f src --html-details Docs/Coverage/Html/coverage.html 
           --sonarqube Docs/Coverage/Sonarqube/coverage.yml -o gcovfile/gcov
         
