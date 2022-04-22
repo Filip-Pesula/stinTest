@@ -1,17 +1,17 @@
-Start testing: Apr 22 01:04 UTC
+Start testing: Apr 22 01:08 UTC
 ----------------------------------------------------------
 1/2 Testing: Test_HttpConnection
 1/2 Test: Test_HttpConnection
 Command: "/home/runner/work/stinTest/stinTest/build/test/Test_HttpConnection"
 Directory: /home/runner/work/stinTest/stinTest
-"Test_HttpConnection" start time: Apr 22 01:04 UTC
+"Test_HttpConnection" start time: Apr 22 01:08 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_HttpConnection" end time: Apr 22 01:04 UTC
+"Test_HttpConnection" end time: Apr 22 01:08 UTC
 "Test_HttpConnection" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,15 +19,15 @@ Test Passed.
 2/2 Test: Test_test
 Command: "/home/runner/work/stinTest/stinTest/build/test/Test_test"
 Directory: /home/runner/work/stinTest/stinTest
-"Test_test" start time: Apr 22 01:04 UTC
+"Test_test" start time: Apr 22 01:08 UTC
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Test_test" end time: Apr 22 01:04 UTC
+"Test_test" end time: Apr 22 01:08 UTC
 "Test_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 22 01:04 UTC
+End testing: Apr 22 01:08 UTC
