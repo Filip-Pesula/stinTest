@@ -54,7 +54,7 @@ jobs:
           mkdir Docs/Coverage/Sonarqube
       - run: >
           gcovr -r . -f src --html-details Docs/Coverage/Html/coverage.html 
-          --sonarqube Docs/Coverage/Sonarqube/coverage.yml -o gcovfile/gcov
+          --sonarqube Docs/Coverage/Sonarqube/coverage.xml
         
       - name: Commit report
         run: |
