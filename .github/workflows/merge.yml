@@ -51,4 +51,16 @@ jobs:
         with:
           name: my-artifact
           path: build/bin/
+          
+      - uses: actions/checkout@v1
+      - name: Create report file
+        run: date +%s > report.txt
+      - name: Commit report
+        run: |
+          git config --global user.name 'Filip-Pesula'
+          git config --global user.email 'filip.pesula@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout "${GITHUB_REF:11}"
+          git commit -am "Automated report"
+          git push
 
