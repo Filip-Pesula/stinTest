@@ -1,2 +1,4 @@
 build/.dump/*
 build/*
+Docs/Coverage/*
+Testing/*
