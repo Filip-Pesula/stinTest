@@ -32,6 +32,31 @@
             }
         },
         {
+            "label": "Buil-Linux",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-B",
+                "build/.dump",
+                "-S",
+                ".",         
+                //"-std=gnu++20",
+                ";",
+                "cmake",
+                "--build",  
+                "build/.dump;",
+                "ctest",
+
+
+                
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "test",
             "type": "shell",
             "command": "./build/release/release_B;",
