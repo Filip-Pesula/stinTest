@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: test
+name: Build-Test
 
 # Controls when the workflow will run
 on: 
@@ -48,6 +48,6 @@ jobs:
         
       - name: coverage
         run: |
-          total='gcovr -r . -f src -s | grep Branches | grep -Eo '[0-9]+\.[0-9]+'
+          total= gcovr -r . -f src -s | grep Branches
           curl "https://${GIT_USER}:${ADIKA_GITHUB_TOKEN}@api.github.com/repos/${ORG_NAME}/${PROJECT_NAME}/statuses/${COMMIT_SHA}" -d "{\"state\": \"${STATE}\",\"target_url\": \"https://github.com/${ORG_NAME}/${PROJECT_NAME}/pull/${PULL_NUMBER}/checks?check_run_id=${RUN_ID}\",\"description\": \"${total}%\",\"context\": \"code cov\"}"
 
