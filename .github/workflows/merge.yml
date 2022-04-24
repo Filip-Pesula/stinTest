@@ -54,8 +54,10 @@ jobs:
           echo "coverage: $total"
           echo $(echo "$total > 70" |bc -l)
           if (( $(echo "$total > 70" |bc -l) )); then
+            echo "coverage OK"
             #curl "https://${GIT_USER}:${ADIKA_GITHUB_TOKEN}@api.github.com/repos/${ORG_NAME}/${PROJECT_NAME}/statuses/${COMMIT_SHA}" -d "{\"state\": \"${STATE}\",\"target_url\": \"https://github.com/${ORG_NAME}/${PROJECT_NAME}/pull/${PULL_NUMBER}/checks?check_run_id=${RUN_ID}\",\"description\": \"${total}%\",\"context\": \"code cov\"}"
           else
+            echo "coverage NOK"
             #curl "https://${GIT_USER}:${ADIKA_GITHUB_TOKEN}@api.github.com/repos/${ORG_NAME}/${PROJECT_NAME}/statuses/${COMMIT_SHA}" -d "{\"state\": \"${STATE}\",\"target_url\": \"https://github.com/${ORG_NAME}/${PROJECT_NAME}/pull/${PULL_NUMBER}/checks?check_run_id=${RUN_ID}\",\"description\": \"not enough coverage ${total}%\",\"context\": \"code cov\"}"
             exit 1
           fi
